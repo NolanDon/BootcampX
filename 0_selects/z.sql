@@ -1,5 +1,6 @@
-SELECT students.name as student, count(assignment_submissions.*) as total_submissions
-FROM assignment_submissions
-JOIN students ON students.id = student_id
-WHERE end_date IS NULL
-GROUP BY students.name;
+SELECT * FROM table
+WHERE id IN (
+  SELECT something_id
+  FROM someTable
+  WHERE something
+);
